@@ -4,7 +4,7 @@ mv automation-sample/cypress.config.js .
 echo `ls`
 npm install
 npx cypress install
-npm start
+(npm run start&)
 npx cypress run
 RESULTS_READY=`echo $?`
 

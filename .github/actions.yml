@@ -1,0 +1,16 @@
+name: "Report deployed info metrics"
+description: "Few metrics to set alerts on to check all is deployed fine"
+inputs:
+  environment:
+    description: "Environment pretty name"
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+    - run: |
+        npm install cypress
+        npx cypress run
+      env:
+        ENVIRONMENT: ${{ inputs.environment }}
+      shell: bash

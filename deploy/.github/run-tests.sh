@@ -1,7 +1,8 @@
 #!/bin/bash
 
-echo `ls automation-sample`
-npx cypress run --config-file automation-sample/cypress.config.js
+mv automation-sample/* .
+rmdir automation-sample
+npx cypress run
 RESULTS_READY=`echo $?`
 
 exit $RESULTS_READY

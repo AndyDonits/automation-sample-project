@@ -2,9 +2,8 @@
 
 mv automation-sample/* .
 echo `ls`
-echo `ls automation-sample`
-rmdir automation-sample
-npx install cypress --force
+npx install
+npx install cypress
 npx cypress run
 RESULTS_READY=`echo $?`
 

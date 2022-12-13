@@ -1,6 +1,7 @@
 #!/bin/bash
 
 mv automation-sample/* .
+echo `ls automation-sample`
 rmdir automation-sample
 npm install cypress
 npx cypress run

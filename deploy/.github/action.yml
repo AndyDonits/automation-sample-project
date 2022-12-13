@@ -8,7 +8,9 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - run: automation-sample-project/deploy/.github/run-tests.sh
+    - run: |
+        chmod u+x deploy/.github/run-tests.sh
+        deploy/.github/run-tests.sh
       env:
         ENVIRONMENT: ${{ inputs.environment }}
       shell: bash

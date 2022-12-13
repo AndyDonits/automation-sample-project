@@ -4,7 +4,7 @@ mv automation-sample/* .
 echo `ls`
 npm install
 npx cypress install
-npm start
+npx react-scripts start
 npx cypress run
 RESULTS_READY=`echo $?`
 

@@ -4,13 +4,15 @@ inputs:
   environment:
     description: "Environment pretty name"
     required: true
+  clone-dir:
+    description: "Name of the parent where the action is cloned"
+    required: false
+    default: "login-e2e-tests"
 
 runs:
   using: "composite"
   steps:
-    - run: |
-        chmod u+x deploy/.github/run-tests.sh
-        deploy/.github/run-tests.sh
+    - run: ${{ inputs.clone-dir }}/deploy/.github/run-tests.sh
       env:
         ENVIRONMENT: ${{ inputs.environment }}
       shell: bash

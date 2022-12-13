@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo `ls`
+echo `ls automation-sample`
 npx cypress run
 RESULTS_READY=`echo $?`
 

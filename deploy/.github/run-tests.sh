@@ -3,7 +3,7 @@
 mv automation-sample/* .
 echo `ls`
 npm install
-npm install cypress
+npx cypress install
 npx cypress run
 RESULTS_READY=`echo $?`
 

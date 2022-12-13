@@ -1,6 +1,6 @@
 describe('empty spec', () => {
   it('Check link', () => {
-    cy.visit('https://docs.cypress.io/guides/overview/why-cypress')
-    cy.get('.main-content-header').should('be.visible')
+    cy.visit('http://localhost:3000')
+    cy.get('p').should('be.visible')
   })
 })

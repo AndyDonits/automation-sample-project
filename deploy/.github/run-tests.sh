@@ -1,10 +1,10 @@
 #!/bin/bash
 
-mv automation-sample/* .
+mv automation-sample/cypress.config.js .
 echo `ls`
 npm install
 npx cypress install
-npx react-scripts start
+npm start
 npx cypress run
 RESULTS_READY=`echo $?`
 
